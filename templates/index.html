@@ -131,11 +131,12 @@
                                     {{ form.csrf_token }}                       
                                     <div class="name-box">
                                         {{ form.name(size=30, required=False, placeholder='Имя') }}
-                                        <label class="input_label"></label>    
+                                        {{ form.name.label(class_='input_label') }}
+                                        <!-- <label class="input_label"></label>   -->
                                         <!-- <input name="name" type="text" id="name" size="30" onfocus="if(this.value == 'Full Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Full Name'; }" value="Имя"><label class="input_label"></label> -->
                                     </div>                                                        
                                     <div class="email-box">
-                                        {{ form.phone(size=30, required=False, id='email', placeholder='Телефон') }} 
+                                        {{ form.phone(size=30, required=False, placeholder='Телефон') }}
                                         <!-- <input name="email" type="text" id="email" size="30" value="" placeholder="Телефон"><label class="input_label"></label> -->
                                     </div>                            
                                     <div class="message-box">
