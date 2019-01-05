@@ -2,7 +2,7 @@ import os
 
 
 class Config():
-    # SECRET_KEY = os.urandom(16)
+    SECRET_KEY = os.urandom(16)
     WTF_CSRF_SECRET_KEY = os.urandom(16)
 
 
