@@ -2,7 +2,7 @@ import os
 
 
 class Config():
-    SECRET_KEY = os.urandom(2)
+    SECRET_KEY = os.urandom(16)
 
 
 class DevelopmentConfig(Config):
