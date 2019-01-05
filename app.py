@@ -9,6 +9,8 @@ from utils import send_email
 app = Flask(__name__)
 app.config.from_object(ProductionConfig)
 
+csrf = CSRFProtect(app)
+
 
 @app.route('/')
 def index():
@@ -27,7 +29,6 @@ def bids():
 
 @app.route('/test', methods=['GET'])
 def test():
-    csrf = CSRFProtect(app)
     form = BidForm()
     return render_template('test.html', form=form)
 
