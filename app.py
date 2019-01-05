@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from flask.json import jsonify
 from config import ProductionConfig
 from forms import BidForm
+from utils import send_email
 
 
 app = Flask(__name__)
@@ -34,9 +35,10 @@ def ajax():
     form = BidForm()
 
     if form.validate_on_submit():
-        utils.send_mail(
-            message='Yes',
-            recipient='costilek@gmail.com'
+        send_email(
+            name=form.name.data,
+            phone=form.phone.data,
+            message=form.message.data
         )
         return send_json_response({'message': 'Ваша заявка успешно отправлена'}, 200)
 
