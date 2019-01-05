@@ -15,4 +15,5 @@ def hello():
     )
     msg.body = 'testing'
     msg.html = '<b>testing</b>'
-    return mail.send(msg)
+    mail.send(msg)
+    return 'Hi'
