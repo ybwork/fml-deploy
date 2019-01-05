@@ -13,7 +13,8 @@ app.config.from_object(ProductionConfig)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    form = BidForm()
+    return render_template('index.html', form=form)
 
 
 @app.route('/customers')

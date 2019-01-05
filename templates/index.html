@@ -127,9 +127,11 @@
                             
                                 <div id="message"></div>
                             
-                                <form method="GET" action="{{ url_for('bids') }}" name="contactform" id="contactform">                             
-                                    <div class="name-box">        
-                                        <input name="name" type="text" id="name" size="30" onfocus="if(this.value == 'Full Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Full Name'; }" value="Имя"><label class="input_label"></label>
+                                <form action="{{ url_for('bids') }}" method="POST" name="contactform" id="contactform">
+                                    {{ form.csrf_token }}                       
+                                    <div class="name-box">
+                                        {{ form.name(size=30, required=False) }}      
+                                        <!-- <input name="name" type="text" id="name" size="30" onfocus="if(this.value == 'Full Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Full Name'; }" value="Имя"><label class="input_label"></label> -->
                                     </div>                                                        
                                     <div class="email-box">
                                         <input name="email" type="text" id="email" size="30" onfocus="if(this.value == 'E-mail') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail'; }" value="Телефон"><label class="input_label"></label>
