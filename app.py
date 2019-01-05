@@ -35,11 +35,11 @@ def ajax():
     form = BidForm()
 
     if form.validate_on_submit():
-        # send_email(
-        #     name=form.name.data,
-        #     phone=form.phone.data,
-        #     message=form.message.data
-        # )
+        send_email(
+            name=form.name.data,
+            phone=form.phone.data,
+            message=form.message.data
+        )
         return send_json_response({'message': 'Ваша заявка успешно отправлена'}, 200)
 
     return send_json_response(form.errors, 400)

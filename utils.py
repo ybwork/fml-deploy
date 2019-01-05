@@ -2,7 +2,7 @@ from flask import current_app as app
 from flask_mail import Mail, Message
 
 
-def send_email(name, phone, mes):
+def send_email(name, phone, message):
     mail = Mail(app)
     msg = Message(
         'Заявка с сайта', 
@@ -10,5 +10,5 @@ def send_email(name, phone, mes):
         recipients=['costilek@gmail.com']
     )
     msg.body = 'yess'
-    msg.html = '<b>{}</b>'.format(mes)
+    msg.html = '<b>{}</b>'.format(message)
     return mail.send(msg)
