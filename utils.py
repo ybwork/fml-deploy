@@ -10,5 +10,13 @@ def send_email(name, phone, message):
         recipients=['costilek@gmail.com']
     )
     msg.body = 'yess'
-    msg.html = '<b>{}</b>'.format(message)
+    msg.html = '''
+                <p>Имя: {name}</p>
+                <p>Телефон: {phone}</p>
+                <p>Сообщение: {message}</p>
+                '''.format(
+                        name=name,
+                        phone=phone,
+                        message=message if message else '...'
+                    )
     return mail.send(msg)
