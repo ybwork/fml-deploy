@@ -7,9 +7,8 @@ from utils import send_email
 
 
 app = Flask(__name__)
-app.config.from_object(ProductionConfig)
-
 csrf = CSRFProtect(app)
+app.config.from_object(ProductionConfig)
 
 
 @app.route('/')
