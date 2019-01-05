@@ -26,6 +26,7 @@ def bids():
 
 @app.route('/test', methods=['GET'])
 def test():
+    csrf = CSRFProtect(app)
     form = BidForm()
     return render_template('test.html', form=form)
 

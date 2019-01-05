@@ -5,8 +5,6 @@ from wtforms import StringField, TextAreaField
 from wtforms.validators import DataRequired, Length
 
 
-csrf = CSRFProtect(app)
-
 
 class BidForm(FlaskForm):
     name = StringField(
