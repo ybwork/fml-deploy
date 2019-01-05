@@ -124,24 +124,20 @@
                             
                             <!-- Contact Formular -->
                             <div id="contact-formular">
-                            
                                 <div id="message"></div>
-                            
                                 <form action="{{ url_for('bids') }}" method="POST" name="contactform" id="contactform">
                                     {{ form.csrf_token }}                       
                                     <div class="name-box">
                                         {{ form.name(size=30, required=False, placeholder='Имя') }}
-                                        {{ form.name.label(class_='input_label', value='') }}
-                                        <!-- <label class="input_label"></label>   -->
-                                        <!-- <input name="name" type="text" id="name" size="30" onfocus="if(this.value == 'Full Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Full Name'; }" value="Имя"><label class="input_label"></label> -->
+                                        <label class="input_label"></label>
                                     </div>                                                        
                                     <div class="email-box">
                                         {{ form.phone(size=30, required=False, placeholder='Телефон') }}
-                                        <!-- <input name="email" type="text" id="email" size="30" value="" placeholder="Телефон"><label class="input_label"></label> -->
+                                        <label class="input_label"></label>
                                     </div>                            
                                     <div class="message-box">
                                         {{ form.message(size=40, required=False, cols='40', rows='4', id='comments', placeholder='Сообщение') }}
-                                        <!-- <textarea name="comments" cols="40" rows="4" id="comments" placeholder="Сообщение"></textarea><label class="input_label slow"></label> -->
+                                        <label class="input_label"></label>
                                     </div>                             
                                      <div class="submit-box">             
                                         <input type="submit" class="send_message clapat-button outline" id="submit" value="Отправить"/> 
@@ -150,9 +146,7 @@
                                                         
                             </div>
                             <!--/Contact Formular -->
-                            
-                            <hr><hr>
-                            
+                            <hr><hr> 
                         </div>
                     </div>
                     <!--/Row -->
