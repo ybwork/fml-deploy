@@ -23,6 +23,15 @@ $('#bids').on('submit', function(e) {
     var action = form.attr('action')
     var method = form.attr('method')
     var data = form.serialize()
+    
+    var csrf_token = "{{ csrf_token() }}";
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrf_token);
+            }
+        }
+    });
 
     $.ajax({
         url: action,
