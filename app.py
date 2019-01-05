@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from flask.json import jsonify
 from config import ProductionConfig
+from forms import BidForm
 
 
 app = Flask(__name__)
