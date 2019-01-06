@@ -500,7 +500,8 @@ Primary use:	Showcase Portfolio
 		font-size:16px;
 		margin-bottom:10px;
 		line-height:28px;
-		color:#999;
+		/*color:#999;*/
+		color: #000;
 	}
 	
 	p.no-margins {
@@ -680,6 +681,10 @@ Primary use:	Showcase Portfolio
 	.row_padding_bottom {
 		padding-bottom:100px;
 	}
+
+	.my_row_padding_bottom {
+		padding-bottom: 40px;
+	} 
 
 
 /*--------------------------------------------------
@@ -2213,6 +2218,10 @@ Primary use:	Showcase Portfolio
 	.row_padding_bottom {
 		padding-bottom: 50px;
 	}
+
+/*	.my_row_padding_bottom {
+		padding-bottom: 40px;
+	}*/
 	
 	.row_padding_top {
     	padding-top: 60px;

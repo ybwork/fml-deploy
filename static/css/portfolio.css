@@ -253,7 +253,7 @@
 		transition: all 0.25s ease-in-out;
 	}
 	
-	.item:first-child .item-title::after {
+/*	.item:first-child .item-title::after {
 		content: "New";
 		font-family: 'Roboto', sans-serif;
 		font-size: 10px;
@@ -267,7 +267,7 @@
 	
 	.black-overlay .item:first-child .item-title::after {
 		top:-4px;
-	}
+	}*/
 	
 	.item-sub-mask {
 		height:20px;
