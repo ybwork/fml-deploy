@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from flask_wtf.csrf import CSRFProtect
 from flask.json import jsonify
 from config import ProductionConfig
 from forms import BidForm
@@ -7,7 +6,6 @@ from utils import send_email
 
 
 app = Flask(__name__)
-csrf = CSRFProtect(app)
 app.config.from_object(ProductionConfig)
 
 

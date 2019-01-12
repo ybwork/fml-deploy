@@ -115,8 +115,7 @@
                             <!-- Contact Formular -->
                             <div id="contact-formular">
                                 <div id="message"></div>
-                                <form action="{{ url_for('bids') }}" method="POST" name="contactform" id="contactform">
-                                    {{ form.csrf_token }}                       
+                                <form action="{{ url_for('bids') }}" method="POST" name="contactform" id="contactform">                    
                                     <div class="name-box">
                                         {{ form.name(size=30, required=False, placeholder='Имя') }}
                                         <label class="input_label"></label>
