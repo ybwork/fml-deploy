@@ -3,6 +3,7 @@ import os
 
 class Config():
     SECRET_KEY = os.urandom(16)
+    WTF_CSRF_ENABLED = False
 
 
 class DevelopmentConfig(Config):
