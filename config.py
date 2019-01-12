@@ -2,6 +2,7 @@ import os
 
 
 class Config():
+    SESSION_COOKIE_SECURE = True
     SECRET_KEY = os.urandom(16)
     WTF_CSRF_SECRET_KEY = os.urandom(16)
 
