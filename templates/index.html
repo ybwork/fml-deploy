@@ -115,17 +115,17 @@
                             <!-- Contact Formular -->
                             <div id="contact-formular">
                                 <div id="message"></div>
-                                <form action="{{ url_for('bids') }}" method="POST" name="contactform" id="contactform">                    
+                                <form action="{{ url_for('bids') }}" method="POST" id="bids">                    
                                     <div class="name-box">
                                         {{ form.name(size=30, required=False, placeholder='Имя') }}
                                         <label class="input_label"></label>
                                     </div>                                                        
-                                    <div class="email-box">
+                                    <div class="phone-box">
                                         {{ form.phone(size=30, required=False, placeholder='Телефон') }}
                                         <label class="input_label"></label>
                                     </div>                            
                                     <div class="message-box">
-                                        {{ form.message(size=40, required=False, cols='40', rows='4', id='comments', placeholder='Сообщение') }}
+                                        {{ form.message(size=40, required=False, cols='40', rows='4', placeholder='Сообщение') }}
                                         <label class="input_label"></label>
                                     </div>                             
                                      <div class="submit-box">             

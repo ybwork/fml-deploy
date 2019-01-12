@@ -834,12 +834,12 @@
 		position:relative;
 	}
 	
-	.name-box, .email-box, .message-box {
+	.name-box, .phone-box, .message-box {
 		position:relative;
 		display:block;
 	}
 	
-	.name-box, .email-box {
+	.name-box, .phone-box {
 		width: 47%;
 		float: left;
 		margin-bottom: 20px;
@@ -852,13 +852,13 @@
 		background: #ddd;
 	}
 	
-	.name-box::after, .email-box::after {
+	.name-box::after, .phone-box::after {
 		clear: both;
 		content: " ";
 		display: table;
 	}
 
-	.email-box {
+	.phone-box {
 		margin-right:0px;
 	}
 	
@@ -1073,7 +1073,7 @@
 
 @media only screen and (max-width: 767px) {
 	
-	.name-box, .email-box {
+	.name-box, .phone-box {
 		width: 100%;
 		margin-right: 0;
 	}
